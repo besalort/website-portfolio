@@ -1,0 +1,13 @@
+services:
+  portfolio:
+    container_name: frontend_portfolio
+    build:
+      context: ./portfolio
+    ports:
+      # - "8443:443"
+      - "3000:3000"
+    restart: unless-stopped
+    # volumes: []
+    # - ./portfolio/app:/app
+    environment:
+    - NODE_ENV=development

@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
+44444E Black
+1E1E1E Grey
+D3DAD9 Cream
+715A5A Brown
+*/
+
+.example {
+  @apply px-16 py-4 bg-blue-500 text-white rounded hover:bg-green-600 transition;
+}
+
+.red-title {
+  @apply text-red-500;
+}
+
+.allpage {
+	@apply text-white;
+	background: #44444E;
+}
