@@ -1,2 +1,4 @@
 # dockerWebsite
-NextJs + TailwindCss
+NextJs + TailwindCss Frontend
+NestJS Backend
+

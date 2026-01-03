@@ -1,0 +1,22 @@
+services:
+  frontend:
+    container_name: frontbsalort
+    build: ./frontend
+    ports:
+      - "3000:3000"
+      # - "8443:443"
+    depends_on:
+      - backend
+    restart: unless-stopped
+    # volumes: []
+    # - ./portfolio/app:/app
+    environment:
+    # - NODE_ENV=development
+      - NEXT_PUBLIC_API_URL=http://backbsalort:3001
+
+  backend:
+    container_name: backbsalort
+    build: ./backend
+    ports:
+      - "3001:3001"
+    

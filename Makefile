@@ -1,8 +1,13 @@
-COMPOSE_PATH=requirement/docker-compose.yml
+COMPOSE_PATH=requirement/bsalort/docker-compose.yml
+FRONT_PATH=requirement/bsalort/frontend
+BACK_PATH=requirement/bsalort/backend
 
 all:
-	cd ./requirement/portfolio && npm install
-	cd ./requirement/portfolio && npm run build
+	cd ./${FRONT_PATH} && npm install
+	cd .//${BACK_PATH} && npm install
+	cd ./${FRONT_PATH} && npm install @nestjs/core @nestjs/common @nestjs/platform-express rxjs reflect-metadata
+	cd .//${BACK_PATH} && npx nest build
+	cd .//${FRONT_PATH} && npm run build
 	docker compose -f ${COMPOSE_PATH} build --no-cache
 	docker compose -f $(COMPOSE_PATH) up -d
 
@@ -26,18 +31,21 @@ destroy: clean
 	docker volume prune -f
 	docker system prune -a -f
 	docker system df
-	rm -rf requirement/portfolio/dist
-	rm -rf requirement/portfolio/node_modules
-	rm -rf requirement/portfolio/.next
-	rm -rf requirement/portfolio/tsconfig.json
+	rm -rf ./${FRONT_PATH}/dist
+	rm -rf ./${FRONT_PATH}/node_modules
+	rm -rf ./${FRONT_PATH}/.next
+	rm -rf ./${BACK_PATH}/dist
+	rm -rf ./${BACK_PATH}/node_modules
+	rm -rf ./${BACK_PATH}/.next
+# 	rm -rf requirement/portfolio/tsconfig.json
 
 log:
 	docker compose -f $(COMPOSE_PATH) logs frontend_portfolio
 
 dev:
-	cd ./requirement/portfolio && npm install
-	cd ./requirement/portfolio && npm install three @react-three/fiber@8 @react-three/drei@9
-	cd ./requirement/portfolio && npm run dev
+	cd ./${FRONT_PATH} && npm install
+# 	cd ./${FRONT_PATH} && npm install three @react-three/fiber@8 @react-three/drei@9
+	cd ./${FRONT_PATH} && npm run dev
 	docker compose -f $(COMPOSE_PATH) up -d
 
 .PHONY: all debug start stop clean fclean re destroy log dev
