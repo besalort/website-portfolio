@@ -9,7 +9,76 @@ D3DAD9 Cream
 715A5A Brown
 */
 
-.example {
+/* 
+#0f172a  → tailwind: bg-gray-900 Background
+#1e293b → tailwind: bg-gray-800 NavBar / Secondaire
+#e5e7eb → tailwind: bg-gray-200 Text principal
+
+#38bdf8 → tailwind: bg-sky-400
+#0ea5e9 → tailwind: bg-sky-600 
+*/
+
+
+/* Nouvelle version */
+
+.allpage {
+	@apply text-gray-200;
+	background: #0F172A;
+}
+
+/* NavBar */
+.navBar {
+  background-color: #1E293B;
+  @apply flex fixed top-0 left-0 w-full;
+}
+
+.navTitle {
+  @apply text-sky-400 text-4xl font-bold px-2 py-2 hover:text-sky-700;
+}
+
+.navDivBtns {
+  @apply ml-auto flex py-3 space-x-3 px-2;
+}
+
+.navBtn {
+  @apply flex items-center gap-2 h-8 px-2 box-border border border-blue-500 rounded-full font-semibold transition-transform hover:bg-blue-500 hover:text-white; 
+}
+
+.navBtn:hover {
+  transform: scale(1.1);
+}
+
+.navSvgBtn {
+  @apply w-5 h-5;
+}
+
+/* BottomBar */
+
+.bottomBar {
+  background: #1E293B;
+  /* @apply bot-0 w-full flex; */
+  @apply w-full flex flex-col items-center justify-center py-2 mt-10 space-y-2;
+
+}
+
+.bottomBarImg {
+  @apply w-10 h-10 object-contain;
+}
+
+.bottomBarDivBtn {
+  @apply space-x-10;
+}
+
+/* HomePage */
+.homeHeader {
+  @apply flex flex-col items-center justify-center text-center py-32;
+}
+
+
+
+/* /////////////////////////////////////////////////////////////////////////////////////// */
+
+/* .example {
   @apply px-10 py-4 bg-blue-500 text-white rounded hover:bg-blue-700 transition mx-2;
 }
 
@@ -24,15 +93,15 @@ D3DAD9 Cream
 
 .pHome {
   @apply text-lg text-white text-center;
-}
+} */
 
-.allpage {
+/* .allpage {
 	@apply text-white;
   @apply min-h-screen flex flex-col pt-20;
 	background: #44444E;
-}
+} */
 
-.navBar {
+/* .navBar {
   @apply fixed top-0 left-0 w-full flex justify-between items-center px-8 py-4 bg-gray-800 shadow-md z-50;
   background: #1E1E1E;
 }
@@ -52,9 +121,9 @@ D3DAD9 Cream
 
 .buttonsNav{
   @apply space-x-4;
-}
+} */
 
-.scrabbleDiv {
+/* .scrabbleDiv {
   background: #EEEE;
   @apply text-black py-5 text-center;
   
@@ -62,13 +131,13 @@ D3DAD9 Cream
 
 .linktxt {
   @apply px-2 py-2 text-blue-500 underline;
-}
+} */
 
 /* .infoPage {
   @apply bg-gray-900 text-white min-h-screen flex flex-col;
 } */
 
-.infoContainer {
+/* .infoContainer {
   @apply flex flex-col items-center justify-start px-8 py-12 space-y-6;
 }
 
@@ -90,7 +159,7 @@ D3DAD9 Cream
 
 .infoLink {
   @apply px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition;
-}
+} */
 
 .cvContainer {
   @apply w-full flex justify-center mt-6;
@@ -100,13 +169,7 @@ D3DAD9 Cream
   @apply w-full max-w-4xl h-[80vh] border-none rounded shadow-lg;
 }
 
-
-
-
-/* .allpage {
-  @apply bg-gray-900 text-white min-h-screen flex flex-col items-center;
-} */
-
+/* 
 .homeHeader {
   @apply flex flex-col items-center justify-center text-center py-32 px-6 space-y-6;
 }
@@ -142,4 +205,4 @@ D3DAD9 Cream
 
 .model3dContainer {
   @apply w-full h-[400px];
-}
+} */
