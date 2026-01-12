@@ -15,8 +15,8 @@ const dancing = Dancing_Script({
   weight: ["400", "600"],
 });
 export const metadata = {
-  title: 'Mon Portfolio',
-  description: 'Bienvenue sur mon portfolio',
+  title: 'bsalort.fr',
+  description: 'Portfolio de Benjamin Salort, etudiant en architecture informatique a l\'ecole 42 Paris.',
 }
 
 export default function RootLayout({
@@ -26,6 +26,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fr">
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </head>
       <body className="{poppins.className}">
         <Navbar />
         {children}

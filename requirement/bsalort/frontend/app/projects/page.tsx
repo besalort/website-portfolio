@@ -16,7 +16,7 @@ export default function Projects() {
                     <h1 className="basicH1">Mes projets</h1>
                     <p className="basicP">Voici quelques exemples des projets que j'ai fait jusqu'ici.</p>
                 </div>
-                <div className="projetBtnDiv">
+                <div className="projetProjectsDiv">
 {/* CUB3D */}
                     <div className="projetGenDesc">
                         <div className="projetDesc">
@@ -34,6 +34,7 @@ export default function Projects() {
                             <p>C</p>
                         </div>
                     </div>
+                    <hr className="homeHr" />
 {/* TRANSCENDENCE */}
                     <div className="projetGenDesc">
                         <div className="projetDesc">
@@ -57,6 +58,7 @@ export default function Projects() {
                             <p className="basicP">Single page application comprenant un systeme d'authentification securise et un jeu multijoueur Pong avec suivi des statistiques des joueurs.</p>
                         </div>
                     </div>
+                    <hr className="homeHr" />
 {/* SO_LONG */}
 {/* GODOT MINI PROJECTS */}
 {/* SCRABBLE HELPER */}
@@ -65,7 +67,7 @@ export default function Projects() {
                             <Link href="/projects/scrabbleHelper">
                                 <button className='projetBtn'>Scrabble Helper</button>
                             </Link>
-                            <p className="basicP">Mini projet web consistant a trouver dans un dictionnaire une liste de mot possible selon les criteres remplis par l'utilisateur.</p>
+                            <p className="basicP">Mini projet web consistant a trouver dans un dictionnaire une liste de mot selon des criteres remplis par l'utilisateur.</p>
                         </div>
                         <div className="projetDesc"><img src="" alt="Image page Scrabble Helper" /></div>
                     </div>
